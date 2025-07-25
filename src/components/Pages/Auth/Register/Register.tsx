@@ -1,7 +1,7 @@
 "use client";
 
 import sniginpic from "@/assets/auth/authImage.png";
-import logo from "@/assets/logo/dating-logo.png";
+import logo from "@/assets/hero/10mslogo-svg.svg";
 import Button from "@/components/ui/Button";
 import InputComponent from "@/components/ui/InputComponent";
 import { useRegisterMutation } from "@/redux/features/auth/authApi";

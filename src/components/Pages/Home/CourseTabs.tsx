@@ -26,7 +26,7 @@ export default function CourseCarousel() {
   };
 
   return (
-    <div className="w-[1100px]   ">
+    <div className="w-[1100px]">
       <div className="relative overflow-hidden">
         {/* Carousel container */}
         <div
