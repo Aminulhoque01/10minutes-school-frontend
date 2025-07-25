@@ -1,10 +1,10 @@
 import { NextResponse } from "next/server";
 import { NextRequest } from "next/server";
-import { parse } from "cookie"; // Correct import for the cookie package
+import { parse } from "cookie";  
 
 function checkAuth(request: NextRequest) {
-  const cookiesHeader = request.headers.get("cookie"); // Get the cookie header
-  const cookies = cookiesHeader ? parse(cookiesHeader) : {}; // Use the named 'parse' function
+  const cookiesHeader = request.headers.get("cookie");  
+  const cookies = cookiesHeader ? parse(cookiesHeader) : {};  
 
 
   return NextResponse.next(cookies);

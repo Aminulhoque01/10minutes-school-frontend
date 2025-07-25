@@ -5,7 +5,7 @@
 "use client"
 import Image from 'next/image'
 import Link from 'next/link'
-import logo from "@/assets/logo/dating-logo.png";
+import logo from "@/assets/hero/10mslogo-svg.svg";
 import { FaFacebook, FaInstagram, FaLinkedinIn } from 'react-icons/fa6';
  
 
