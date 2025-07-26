@@ -247,7 +247,7 @@ import {
   default as userIcon,
 } from "@/assets/hero/10mslogo-svg.svg";
 import { loggedUser, logoutUser } from "@/redux/features/auth/authSlice";
-import { ImageBaseUrl } from "@/redux/features/blog/ImageBaseUrl";
+// import { ImageBaseUrl } from "@/redux/features/blog/ImageBaseUrl";
 import { useGetMyProfileQuery } from "@/redux/features/profile/profileApi";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import Cookies from "js-cookie";
@@ -345,7 +345,7 @@ const Navbar = ({ setIsMobileMenuOpen }: NavbarProps) => {
               onMouseLeave={() => setIsHovering(false)}
             >
               <div className="flex items-center space-x-2">
-                <button>
+                {/* <button>
                   <Image
                     src={
                       user?.profileImage
@@ -357,7 +357,7 @@ const Navbar = ({ setIsMobileMenuOpen }: NavbarProps) => {
                     height={40}
                     className="w-[40px] h-[40px] rounded-full cursor-pointer"
                   />
-                </button>
+                </button> */}
                 {user?.role === "customer" ? (
                   <Link href="/feed-post">
                     <button className="px-5 py-2 bg-[#1EB9C6] text-white rounded-lg">
@@ -437,7 +437,7 @@ const Navbar = ({ setIsMobileMenuOpen }: NavbarProps) => {
           <div className="flex justify-center py-4">
             {userState ? (
               <div className="flex flex-col items-center">
-                <Image
+                {/* <Image
                   src={
                     user?.profileImage
                       ? `${ImageBaseUrl}${user?.profileImage}`
@@ -447,7 +447,7 @@ const Navbar = ({ setIsMobileMenuOpen }: NavbarProps) => {
                   width={40}
                   height={40}
                   className="rounded-full mb-2"
-                />
+                /> */}
                 <Link href="/my-profile">
                   <button
                     onClick={() => {

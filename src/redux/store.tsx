@@ -2,14 +2,14 @@ import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query";
 import { combineReducers } from "redux";
 import authReducer from "./features/auth/authSlice";
-import cartReducer from "./features/cart/cartSlice";
+
 
 import { baseApi } from "./features/api/baseApi";
 
 // Combine reducers
 const rootReducer = combineReducers({
   auth: authReducer,
-  cart: cartReducer,
+  // cart: cartReducer,
 
   [baseApi.reducerPath]: baseApi.reducer,
 });

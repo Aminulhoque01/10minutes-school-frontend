@@ -7,6 +7,7 @@ import live from "../../../assets/logo/live.png"
 import { Image } from "antd/lib";
 import CourseLearn from "../learCourse/page";
 import CourseAccording from "../CourseAccording/page";
+import CourseContent from "../Content/page";
 
 export default function CourseWraper() {
     return (
@@ -136,6 +137,10 @@ export default function CourseWraper() {
             </div>
             <div>
                 <CourseAccording/>
+            </div>
+
+            <div>
+                <CourseContent/>
             </div>
         </div>
 

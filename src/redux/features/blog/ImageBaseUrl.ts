@@ -1,1 +1,0 @@
-export const ImageBaseUrl="https://aminula5000.sobhoy.com"
