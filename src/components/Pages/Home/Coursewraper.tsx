@@ -6,6 +6,7 @@ import remaider from "../../../assets/logo/Quizzes.jpg";
 import live from "../../../assets/logo/live.png"
 import { Image } from "antd/lib";
 import CourseLearn from "../learCourse/page";
+import CourseAccording from "../CourseAccording/page";
 
 export default function CourseWraper() {
     return (
@@ -111,11 +112,11 @@ export default function CourseWraper() {
                     <button className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition">
                         Free download
                     </button>
-                
-                
+
+
                     <div className="absolute top-4 right-4">
                         <Image
-                            src="https://via.placeholder.com/80"  
+                            src="https://via.placeholder.com/80"
                             alt="Spoken English Logo"
                             width={80}
                             height={80}
@@ -126,11 +127,16 @@ export default function CourseWraper() {
                             <h3 className="text-xl font-semibold text-red-500">Spoken English-এর</h3>
                             <h3 className="text-xl font-semibold text-red-500">এক্সক্লুসিভ নোটস</h3>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
-            <CourseLearn/>
+            <div>
+                <CourseLearn />
+            </div>
+            <div>
+                <CourseAccording/>
+            </div>
         </div>
 
     );
