@@ -8,6 +8,8 @@ import { Image } from "antd/lib";
 import CourseLearn from "../learCourse/page";
 import CourseAccording from "../CourseAccording/page";
 import CourseContent from "../Content/page";
+import Certificate from "../Certificate/page";
+import TestimonialCarousel from "../testimonial/page";
 
 export default function CourseWraper() {
     return (
@@ -141,6 +143,12 @@ export default function CourseWraper() {
 
             <div>
                 <CourseContent/>
+            </div>
+            <div>
+                <Certificate/>
+            </div>
+            <div>
+                <TestimonialCarousel/>
             </div>
         </div>
 
