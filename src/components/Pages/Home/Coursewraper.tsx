@@ -10,6 +10,8 @@ import CourseAccording from "../CourseAccording/page";
 import CourseContent from "../Content/page";
 import Certificate from "../Certificate/page";
 import TestimonialCarousel from "../testimonial/page";
+import FaqInfo from "../Faq/page";
+import CourseDisplay from "../suggest/page";
 
 export default function CourseWraper() {
     return (
@@ -149,6 +151,12 @@ export default function CourseWraper() {
             </div>
             <div>
                 <TestimonialCarousel/>
+            </div>
+            <div>
+                <FaqInfo/>
+            </div>
+            <div>
+                <CourseDisplay/>
             </div>
         </div>
 

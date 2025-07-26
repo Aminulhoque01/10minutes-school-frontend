@@ -75,7 +75,7 @@ export default function TestimonialCarousel() {
   };
  
   return (
-    <div className="w-[1100px]  px-4 py-8">
+    <div className="w-[1100px]   py-8">
       <h2 className="text-2xl font-bold text-gray-800 mb-6">What students are saying</h2>
       <div className="relative overflow-hidden">
         <div
@@ -89,10 +89,10 @@ export default function TestimonialCarousel() {
               className="flex-shrink-0 px-4"
               style={{ width: `${50 / visibleCards}%` }}  
             >
-              <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow h-full">
-                <div className="flex items-center mb-4">
+              <div className="bg-white border border-gray-200  rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow h-full">
+             
                   <span className="text-pink-400 text-2xl mr-2">“</span>
-                </div>
+               
                 <div className="flex mb-4">
                   {[...Array(card.rating)].map((_, i) => (
                     <span key={i} className="text-yellow-400">★</span>
