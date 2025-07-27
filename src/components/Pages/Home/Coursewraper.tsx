@@ -48,8 +48,8 @@ export default function CourseWraper() {
                         <span className="text-red-500 text-xl mr-3"><Image
                             src={vide.src}
                             alt="Video icon"
-                            width={24} // Adjust width as needed
-                            height={24} // Adjust height as needed
+                            width={24}  
+                            height={24}  
                         /></span>
                         <div className=" ">
                             <p className="text-sm font-medium">৯০টি মিনিমাল টকিং (লেকচার)</p>
@@ -62,8 +62,8 @@ export default function CourseWraper() {
                         <span className="text-blue-500 text-xl mr-3"><Image
                             src={Book.src}
                             alt="Video icon"
-                            width={24} // Adjust width as needed
-                            height={24} // Adjust height as needed
+                            width={24}  
+                            height={24} 
                         /></span>
                         <div className=" ">
                             <p className="text-sm font-medium">Practice Centered (নোটস)</p>
@@ -76,8 +76,8 @@ export default function CourseWraper() {
                         <span className="text-purple-500 text-xl mr-3"><Image
                             src={remaider.src}
                             alt="Video icon"
-                            width={24} // Adjust width as needed
-                            height={24} // Adjust height as needed
+                            width={24}  
+                            height={24}  
                         /></span>
                         <div className=" ">
                             <p className="text-sm font-medium">অ্যানালিটিক & নোট কুইজ</p>
