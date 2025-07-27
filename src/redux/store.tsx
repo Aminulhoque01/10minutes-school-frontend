@@ -1,14 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query";
 import { combineReducers } from "redux";
-import authReducer from "./features/auth/authSlice";
+ 
 
 
 import { baseApi } from "./features/api/baseApi";
 
 // Combine reducers
 const rootReducer = combineReducers({
-  auth: authReducer,
+ 
   // cart: cartReducer,
 
   [baseApi.reducerPath]: baseApi.reducer,
@@ -28,3 +28,9 @@ setupListeners(store.dispatch);
 // Types
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
+
+ 
+
+
+
+ 

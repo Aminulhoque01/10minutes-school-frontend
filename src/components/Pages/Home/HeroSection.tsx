@@ -2,7 +2,7 @@
 export default function HeroSection() {
   return (
     <div className="w-full bg-gradient-to-r from-gray-900 to-blue-900 text-white flex items-center justify-between p-6 h-[400px]">
-      <div className="w-[75%] container mx-auto space-y-10  mt-20 pt-20">
+      <div className="md:w-[75%] container mx-auto space-y-10  mt-20 pt-20">
         <div className="flex justify-between mt-20 pt-20">
           <div className="mt-20">
             <div className="w-1/2 mt-20 pt-20">
@@ -16,7 +16,7 @@ export default function HeroSection() {
               </p>
             </div>
           </div>
-          <div className="w-1/4   mt-20 pt-20">
+          <div className="lg:w-1/4   mt-20 pt-20">
             <div className="bg-white border border-gray-200 mt-20">
               <div className=" bg-blue-900 p-4 rounded-lg ">
                 <img

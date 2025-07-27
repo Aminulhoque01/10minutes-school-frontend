@@ -7,7 +7,7 @@ import {
   default as logo,
   default as userIcon,
 } from "@/assets/hero/10mslogo-svg.svg";
-import { loggedUser, logoutUser } from "@/redux/features/auth/authSlice";
+
 // import { ImageBaseUrl } from "@/redux/features/blog/ImageBaseUrl";
 import { useGetMyProfileQuery } from "@/redux/features/profile/profileApi";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
@@ -34,32 +34,7 @@ const Navbar = ({ setIsMobileMenuOpen }: NavbarProps) => {
   const [isMobileMenuOpen, setIsMobileMenuOpenLocal] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
 
-  const { data } = useGetMyProfileQuery({});
-  const user = data?.data.attributes;
-  const dispatch = useAppDispatch();
-  const userState = useAppSelector((state) => state.auth.user);
-
-  useEffect(() => {
-    const token = Cookies.get("token");
-    const userData = Cookies.get("user")
-      ? JSON.parse(Cookies.get("user") as string)
-      : null;
-    const refreshToken = Cookies.get("refreshToken");
-
-    if (token && userData && refreshToken) {
-      dispatch(loggedUser({ user: userData, token, refreshToken }));
-    } else {
-      dispatch(logoutUser());
-    }
-  }, [dispatch]);
-
-  const handleLogout = () => {
-    dispatch(logoutUser());
-    Cookies.remove("token");
-    Cookies.remove("user");
-    Cookies.remove("refreshToken");
-  };
-
+ 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpenLocal((prev) => {
       const newState = !prev;
@@ -97,47 +72,7 @@ const Navbar = ({ setIsMobileMenuOpen }: NavbarProps) => {
           </div>
         </div>
 
-        {/* User Section */}
-        <div className="hidden md:block relative">
-          {userState ? (
-            <div
-              className="relative"
-              onMouseEnter={() => setIsHovering(true)}
-              onMouseLeave={() => setIsHovering(false)}
-            >
-              <div className="flex items-center space-x-2">
-                {/* <button>
-                  <Image
-                    src={
-                      user?.profileImage
-                        ? `${ImageBaseUrl}${user?.profileImage}`
-                        : userIcon
-                    }
-                    alt="User"
-                    width={40}
-                    height={40}
-                    className="w-[40px] h-[40px] rounded-full cursor-pointer"
-                  />
-                </button> */}
-                {user?.role === "customer" ? (
-                  <Link href="/feed-post">
-                    <button className="px-5 py-2 bg-[#1EB9C6] text-white rounded-lg">
-                      Posten Sie Ihren Bedarf
-                    </button>
-                  </Link>
-                ) : null}
-              </div>
-             
-            </div>
-          ) : (
-            <Link href="/auth-role">
-              <button className="px-5 py-2 bg-green-500 text-white rounded-lg">
-                Sign In
-              </button>
-            </Link>
-          )}
-        </div>
-
+      
         {/* Mobile Menu Toggle */}
         <div className="md:hidden flex items-center">
           <button onClick={toggleMobileMenu} className="text-2xl">
@@ -166,46 +101,7 @@ const Navbar = ({ setIsMobileMenuOpen }: NavbarProps) => {
             ))}
           </ul>
 
-          <div className="flex justify-center py-4">
-            {userState ? (
-              <div className="flex flex-col items-center">
-            
-                <Link href="/my-profile">
-                  <button
-                    onClick={() => {
-                      setIsMobileMenuOpenLocal(false);
-                      setIsMobileMenuOpen(false);
-                    }}
-                    className="w-full px-5 py-2 bg-gray-200 rounded-lg mb-2"
-                  >
-                    Profile
-                  </button>
-                </Link>
-                <button
-                  onClick={() => {
-                    handleLogout();
-                    setIsMobileMenuOpenLocal(false);
-                    setIsMobileMenuOpen(false);
-                  }}
-                  className="w-full px-5 py-2 bg-red-500 text-white rounded-lg"
-                >
-                  Logout
-                </button>
-              </div>
-            ) : (
-              <Link href="/register">
-                <button
-                  onClick={() => {
-                    setIsMobileMenuOpenLocal(false);
-                    setIsMobileMenuOpen(false);
-                  }}
-                  className="px-5 py-2 bg-primary text-white rounded-lg"
-                >
-                  Sign In
-                </button>
-              </Link>
-            )}
-          </div>
+        
         </div>
       )}
     </header>

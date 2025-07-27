@@ -1,7 +1,11 @@
 // components/InfoPage.js
+ 
+ 
+import { baseApi } from '@/redux/features/api/baseApi';
 import React from 'react';
 
 export default function FaqInfo() {
+  
     return (
         <div className="w-[1100px] p-6 rounded-lg  ">
             {/* Required for class section */}
@@ -81,3 +85,4 @@ export default function FaqInfo() {
         </div>
     );
 }
+
